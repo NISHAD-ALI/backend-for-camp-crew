@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const router = express_1.default.Router();
+const controller_1 = require("../controllers/controller");
+const multer_1 = require("../middlewares/multer");
+router.post('/signup', (req, res) => (0, controller_1.signup)(req, res));
+router.post('/login', (req, res) => (0, controller_1.login)(req, res));
+router.get('/getProfile/:id', (req, res) => (0, controller_1.getProfile)(req, res));
+router.patch('/editProfile', multer_1.uploadFile.single('image'), (req, res) => (0, controller_1.editProfile)(req, res));
+router.post('/createCamp', multer_1.uploadFile.single('image'), (req, res) => (0, controller_1.newCamp)(req, res));
+router.get('/getCamps', (req, res) => (0, controller_1.getCamps)(req, res));
+router.get('/getCampsOne/:id', (req, res) => (0, controller_1.getCampsOne)(req, res));
+router.get('/getParticipants/:id', (req, res) => (0, controller_1.getParticipants)(req, res));
+router.get('/isEnrolled/:id', (req, res) => (0, controller_1.isUserEnrolled)(req, res));
+router.post('/enrollToCamp/:id', (req, res) => (0, controller_1.enrollToCamp)(req, res));
+router.get('/getMyCamps/:id', (req, res) => (0, controller_1.getMyCamps)(req, res));
+exports.default = router;
