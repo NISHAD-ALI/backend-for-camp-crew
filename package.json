@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon index.ts"
-  },
+  "postinstall": "chmod +x ./node_modules/.bin/nodemon",
+  "start": "npx nodemon index.ts"
+}
+,
   "author": "",
   "license": "ISC",
   "devDependencies": {
