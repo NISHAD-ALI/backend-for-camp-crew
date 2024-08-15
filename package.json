@@ -5,10 +5,14 @@
   "main": "index.ts",
  "scripts": {
   "start": "node index.ts",
-  "build": "tsc",
+  "build": "npx tsc",
   "dev": "node index.ts",
   "install:prod": "npm install --omit=dev"
+},
+"engines": {
+  "node": ">=16.x"
 }
+
 
 ,
   "author": "",
