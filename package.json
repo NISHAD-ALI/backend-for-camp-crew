@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.ts",
  "scripts": {
-  "start": "nodemon index.ts",
+  "start": "node index.ts",
   "build": "tsc",
-  "dev": "nodemon index.ts",
+  "dev": "node index.ts",
   "install:prod": "npm install --omit=dev"
 }
 
