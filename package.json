@@ -3,19 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
-  "type": "module",
- "scripts": {
-  "start": "node index.ts",
-  "build": "npx tsc",
-  "dev": "node index.ts",
-  "install:prod": "npm install --omit=dev"
-},
-"engines": {
-  "node": ">=16.x"
-}
-
-
-,
+  "scripts": {
+    "start": "nodemon dist/index.js",
+    "build": "tsc",
+    "dev": "node index.ts",
+    "install:prod": "npm install --omit=dev"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
